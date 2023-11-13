@@ -169,8 +169,6 @@ async create(userId: number, dto: CreateArticleDto) {
   return { article: article.toJSON(user!) };
 }
 
-
-
   async update(userId: number, slug: string, articleData: any): Promise<IArticleRO> {
     const user = await this.userRepository.findOne(
       { id: userId },
